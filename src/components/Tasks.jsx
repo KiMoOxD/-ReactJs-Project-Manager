@@ -1,10 +1,12 @@
 import React from 'react'
 import Task from './Task'
+import { useProjects } from '../context/ProjectContextProvider'
 
-export default function Tasks({ projects, SelectProject, setProjectState}) {
+export default function Tasks() {
+  let { projectState, SelectProject, setProjectState} = useProjects()
   return (
     <section className='mt-3'>  
-      {projects.map(project => <Task key={project.id} title={project.title} id={project.id} SelectProject={SelectProject} setProjectState={setProjectState} />)}
+      {projectState.projects.map(project => <Task key={project.id} title={project.title} id={project.id} SelectProject={SelectProject} setProjectState={setProjectState} />)}
     </section>
   )
 }

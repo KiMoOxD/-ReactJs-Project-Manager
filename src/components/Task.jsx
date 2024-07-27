@@ -3,8 +3,8 @@ import { RiDeleteBin7Line } from "react-icons/ri";
 
 export default function Task({ title, SelectProject, id, setProjectState }) {
   return (
-    <div className="p-2 px-4 flex justify-between items-center hover:bg-stone-700 rounded cursor-pointer transition">
-      <p className="text-md flex-1" onClick={() => SelectProject(id)}>
+    <div className="p-2 px-4 flex justify-between flex-col md:flex-row items-center gap-2  md:gap-0 hover:bg-stone-700 rounded cursor-pointer transition">
+      <p className="text-sm md:text-md flex-1" onClick={() => SelectProject(id)}>
         {title}
       </p>
       <button
